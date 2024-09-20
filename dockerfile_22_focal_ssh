@@ -146,6 +146,9 @@ RUN apt-get update && \
     apt-get install -y tree console-setup dialog tasksel screen libncurses5-dev libncursesw5-dev font-manager fontconfig
 #    console-setup-mini
 
+# kas is added to newer Yocto, https://hub.mender.io/t/using-kas-to-reproduce-your-yocto-builds/6020
+RUN sudo pip install kas
+
 # Set the locale
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
