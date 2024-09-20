@@ -10,7 +10,16 @@ old machine building is tuned for newest. Potentially newest Yocto releases coul
 "apt-get install" installs all recommendations. Makes bigger image but it will be nearer normal install.
 
 ## Login to running container
-ssh -o StrictHostKeyChecking=no -p 2222 192.168.1.204
+```
+ssh -p 2222 localhost
+```
+or
+```
+ssh -o StrictHostKeyChecking=no -p 2222 juha@localhost
+```
+Where juha is user-id in machine. 
+
+Target is to have same user ID in container and in host machine. Host machine user has also owner ship to files in mounted directory. Check parameters for "-v" in "docker run ..." command (called in kayntiin.sh).
 
 If image is created with command "RUN echo 'juha:juha' | chpasswd" then use that password. Or check what is written to end of used dockerfile.
 
