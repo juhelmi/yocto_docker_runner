@@ -4,6 +4,16 @@ Docker install instructions in https://linuxiac.com/how-to-install-docker-on-ubu
 
 At end there is enable for not-root users to run docker. Set it and reboot.
 
+## Dockerfile tuning
+Previous dockerfile used Ubuntu 20.04 but Ubuntu 22.04 is newest officially supported and tested then
+old machine building is tuned for newest. Potentially newest Yocto releases could have use for it.
+"apt-get install" installs all recommendations. Makes bigger image but it will be nearer normal install.
+
+## Login to running container
+ssh -o StrictHostKeyChecking=no -p 2222 192.168.1.204
+
+If image is created with command "RUN echo 'juha:juha' | chpasswd" then use that password. Or check what is written to end of used dockerfile.
+
 ## Notes for Yocto project setup
 
 Source: https://medium.com/nerd-for-tech/build-your-own-linux-image-for-the-raspberry-pi-f61adb799652

@@ -1,3 +1,6 @@
+# Container files not going to versioned here
+mount_home/
+
 # Prerequisites
 *.d
 
