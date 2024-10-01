@@ -23,6 +23,9 @@ Target is to have same user ID in container and in host machine. Host machine us
 
 If image is created with command "RUN echo 'juha:juha' | chpasswd" then use that password. Or check what is written to end of used dockerfile.
 
+### Running other dockerfiles
+UBUNTU_VERSION=20 sh (rakenna|kayntiin).sh
+
 ## Notes for Yocto project setup
 
 Source: https://medium.com/nerd-for-tech/build-your-own-linux-image-for-the-raspberry-pi-f61adb799652
@@ -62,3 +65,9 @@ mkdir meta-mylayer/recipes-kernel
 mkdir meta-mylayer/recipes-kernel/linux
 mkdir meta-mylayer/recipes-kernel/linux/linux-yocto
 
+## Other notes
+If submodules are linked to specific commits check those with
+git submodule status
+
+Also check what version is used in checkout
+git submodule status --cached

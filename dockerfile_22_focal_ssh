@@ -53,7 +53,11 @@ RUN apt-get -f -y install \
   g++-multilib libc6-dev-i386 jq git-lfs pigz zstd liblz4-tool \
   cpio file lz4 debianutils iputils-ping python3-git python3-jinja2 \
   python3-subunit locales libacl1 unzip gcc python3-pip python3-pexpect \
-  xz-utils wget
+  xz-utils wget \
+  openjdk-8-jdk openjdk-8-jre \  
+  m4 libtool libtool-bin pkg-config lib32z1 \
+  bmap-tools
+  # Last 3 lines from https://wiki.rdkcentral.com/pages/viewpage.action?pageId=292335921
 RUN dpkg-reconfigure dash
 # packages suggested in https://developer.technexion.com/docs/introduction-to-yocto-customization#build-the-image-for-the-scorpion-machine
 # removed: pylint3 python-pysqlite2 
