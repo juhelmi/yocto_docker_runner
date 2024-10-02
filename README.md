@@ -71,3 +71,18 @@ git submodule status
 
 Also check what version is used in checkout
 git submodule status --cached
+
+
+### Additions to sample local.conf for Kirkstone
+```
+MACHINE ??= "raspberrypi4"
+
+# Enable I2C
+ENABLE_I2C = "1"
+KERNEL_MODULE_AUTOLOAD_rpi += " i2c-dev i2c-bcm2708"
+
+RPI_USE_U_BOOT = "1" 
+
+IMAGE_FSTYPES:append=" rpi-sdimg"
+```
+
